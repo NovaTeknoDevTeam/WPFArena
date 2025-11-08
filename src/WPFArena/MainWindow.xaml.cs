@@ -24,5 +24,11 @@ namespace WPFArena
             DynamicGridSizing dynamicGridSizing = new DynamicGridSizing();
             dynamicGridSizing.Show();
         }
+        
+        private void ScrollableView_Click(object sender, RoutedEventArgs e)
+        {
+            ScrollableUI scrollalbeUi = new ScrollableUI();
+            scrollalbeUi.Show();
+        }
     }
 }

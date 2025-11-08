@@ -1,0 +1,14 @@
+<Window x:Class="WPFArena.LayoutAndPanels.ScrollableUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WPFArena.LayoutAndPanels"
+        mc:Ignorable="d"
+        Title="ScrollableUI" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <Image Source="../Resources/Penguins.jpg" Stretch="None" />
+        </ScrollViewer>
+    </Grid>
+</Window>
