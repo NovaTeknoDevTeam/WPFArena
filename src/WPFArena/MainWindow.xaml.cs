@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using WPFArena.LayoutAndPanels;
+using WPFArena.StandardControls;
 
 namespace WPFArena
 {
@@ -65,6 +66,12 @@ namespace WPFArena
         {
             DragAndDropDemo dragAndDrop = new DragAndDropDemo();
             dragAndDrop.Show();
+        }
+        
+        private void TextBoxDemo1_Click(object sender, RoutedEventArgs e)
+        {
+            TextControlDemo textControlDemo = new TextControlDemo();
+            textControlDemo.Show();
         }
     }
 }
