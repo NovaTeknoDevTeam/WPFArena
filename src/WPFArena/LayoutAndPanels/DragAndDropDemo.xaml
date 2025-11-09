@@ -16,7 +16,7 @@
             <Canvas x:Name="_source" Background="White" MouseLeftButtonDown="OnBeginDrag"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="2" Grid.Column="2">
-            <WrapPanel ItemWidth="50" ItemHeight="50" x:Name="_target" Background="Yellow" Drop="_target_OnDrop" AllowDrop="True"></WrapPanel>
+            <WrapPanel ItemWidth="50" ItemHeight="50" x:Name="_target" Background="Yellow" Drop="_target_OnDrop" DragEnter="_target_OnDragEnter" DragOver="_target_OnDragOver" DragLeave="_target_OnDragLeave" AllowDrop="True"></WrapPanel>
         </Border>
     </Grid>
 </Window>

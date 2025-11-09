@@ -51,4 +51,37 @@ public partial class DragAndDropDemo : Window
             _target.Children.Add(element);
         }
     }
+    
+    private void _target_OnDragEnter(object sender, DragEventArgs e)
+    {
+        Console.WriteLine("Executing OnDragEnter.");
+        if (e.Data.GetDataPresent(typeof(Ellipse).FullName))
+            e.Effects = DragDropEffects.Move;
+        else
+            e.Effects = DragDropEffects.None;
+
+        e.Handled = true;
+    }
+    
+    private void _target_OnDragOver(object sender, DragEventArgs e)
+    {
+        Console.WriteLine("Executing OnDragOver.");
+        if (e.Data.GetDataPresent(typeof(Ellipse).FullName))
+            e.Effects = DragDropEffects.Move;
+        else
+            e.Effects = DragDropEffects.None;
+
+        e.Handled = true;
+    }
+    
+    private void _target_OnDragLeave(object sender, DragEventArgs e)
+    {
+        Console.WriteLine("Executing OnDragLeave.");
+        if (e.Data.GetDataPresent(typeof(Ellipse).FullName))
+            e.Effects = DragDropEffects.Move;
+        else
+            e.Effects = DragDropEffects.None;
+
+        e.Handled = true;
+    }
 }
