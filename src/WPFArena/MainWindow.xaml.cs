@@ -54,5 +54,11 @@ namespace WPFArena
             TabbedUI tabbedUi = new TabbedUI();
             tabbedUi.Show();
         }
+        
+        private void DynamicTabbedUI_Click(object sender, RoutedEventArgs e)
+        {
+            DynamicTabConstruction dynamicTabbedUi = new DynamicTabConstruction();
+            dynamicTabbedUi.Show();
+        }
     }
 }
