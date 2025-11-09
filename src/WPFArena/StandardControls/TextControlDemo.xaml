@@ -12,6 +12,8 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -23,5 +25,15 @@
         <Label Content="_Comment:" Grid.Row="2" Target="_comment"/>
         <TextBox AcceptsReturn="True" Grid.Row="2" Grid.Column="1" x:Name="_comment" Margin="2"/>
         <Button HorizontalAlignment="Center" Margin="4" Grid.Row="3" Grid.ColumnSpan="2" FontSize="16" Content="Submit Comment" Click="OnSubmitCommentsClick" />
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="2">
+            <Run Foreground="Blue" Text="Hello TextBlock"/>
+            <LineBreak/>
+            <Bold>
+                <Italic FontSize="16">This is pronouned text</Italic>
+            </Bold>
+            <LineBreak/>
+            <Run>Click the following link to go to search:</Run>
+            <Hyperlink>Search in Database</Hyperlink>
+        </TextBlock>
     </Grid>
 </Window>
