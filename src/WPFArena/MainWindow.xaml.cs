@@ -42,5 +42,11 @@ namespace WPFArena
             CanvasDemo canvasDemo = new CanvasDemo();
             canvasDemo.Show();
         }
+        
+        private void CanvasDemo2_Click(object sender, RoutedEventArgs e)
+        {
+            PaintingCircles paintingCircles = new PaintingCircles();
+            paintingCircles.Show();
+        }
     }
 }

@@ -15,6 +15,7 @@
                     <MenuItem Header="Scrollable View" Click="ScrollableView_Click"></MenuItem>
                     <MenuItem Header="Border Demo" Click="BorderDemo_Click"></MenuItem>
                     <MenuItem Header="Canvas Demo" Click="CanvasDemo_Click"></MenuItem>
+                    <MenuItem Header="Canvas Demo 2" Click="CanvasDemo2_Click"></MenuItem>
                 </MenuItem>
             </Menu>
         </DockPanel>
