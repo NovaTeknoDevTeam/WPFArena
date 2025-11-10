@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WPFArena.AdvanceExamples;
 using WPFArena.LayoutAndPanels;
 using WPFArena.StandardControls;
 
@@ -108,6 +109,12 @@ namespace WPFArena
         {
             TooltipDemo tooltipDemo = new TooltipDemo();
             tooltipDemo.Show();
+        }
+        
+        private void CalendaraWindow_Click(object sender, RoutedEventArgs e)
+        {
+            ComplexGridExample complexGridWindow = new ComplexGridExample();
+            complexGridWindow.Show();
         }
     }
 }

@@ -29,6 +29,9 @@
                     <MenuItem Header="Bitmap Image Demo" Click="BitmapImageDemo_Click"/>
                     <MenuItem Header="Toolbar and Tooltip Demo" Click="TooltipDemo_Click"/>
                 </MenuItem>
+                <MenuItem Header="Complex Examples">
+                    <MenuItem Header="Calendar Window" Click="CalendaraWindow_Click"/>
+                </MenuItem>
             </Menu>
         </DockPanel>
     </Grid>
