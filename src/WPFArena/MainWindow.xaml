@@ -25,6 +25,8 @@
                     <MenuItem Header="ContentControl Demo" Click="ContentControlDemo_Click"/>
                     <MenuItem Header="HeaderedContentControl Demo" Click="HeaderedContentControlDemo_Click"/>
                     <MenuItem Header="Images Demo" Click="ImagesDemo_Click"/>
+                    <MenuItem Header="Drawing Image Demo" Click="DrawingImageDemo_Click"/>
+                    <MenuItem Header="Bitmap Image Demo" Click="BitmapImageDemo_Click"/>
                 </MenuItem>
             </Menu>
         </DockPanel>

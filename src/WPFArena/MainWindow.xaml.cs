@@ -86,10 +86,22 @@ namespace WPFArena
             headeredContentControlDemo.Show();
         }
         
+        private void DrawingImageDemo_Click(object sender, RoutedEventArgs e)
+        {
+            DrawingImageDemo drawingImageDemo = new DrawingImageDemo();
+            drawingImageDemo.Show();
+        }
+        
         private void ImagesDemo_Click(object sender, RoutedEventArgs e)
         {
             ImagesDemo imagesDemo = new ImagesDemo();
             imagesDemo.Show();
+        }
+        
+        private void BitmapImageDemo_Click(object sender, RoutedEventArgs e)
+        {
+            BitmapImageSourceDemo bitmapImageSourcedemo = new BitmapImageSourceDemo();
+            bitmapImageSourcedemo.Show();
         }
     }
 }
