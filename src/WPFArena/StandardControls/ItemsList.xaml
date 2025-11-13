@@ -38,7 +38,21 @@
             </ComboBoxItem>
         </ComboBox>
         <GroupBox Header="Some Keywords" Grid.Row="1" Margin="4">
-            <ListBox x:Name="_keywordList" Margin="4"></ListBox>
+            <ListBox x:Name="_keywordList" Margin="4">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="_Language" Click="OnLanguageChanged2">
+                            <MenuItem Header="C++" Tag="0" />
+                            <MenuItem Header="C#" Tag="0" />
+                            <MenuItem Header="Visual Basic" Tag="0" />
+                            <MenuItem Header="F#" Tag="0" />
+                            <Separator />
+                            <MenuItem Header="_Save..." />
+                            <MenuItem Header="_Load..." />
+                        </MenuItem>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
         </GroupBox>
     </Grid>
 </Window>

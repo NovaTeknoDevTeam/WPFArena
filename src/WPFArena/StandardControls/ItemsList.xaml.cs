@@ -38,4 +38,10 @@ public partial class ItemsList : Window
         if (keywords != null)
             Array.ForEach(keywords, keyword => _keywordList.Items.Add(keyword));
     }
+
+    void OnLanguageChanged2(object s, RoutedEventArgs e)
+    {
+        var item = e.Source as MenuItem;
+        _langCombo.SelectedIndex = Convert.ToInt32(item.Tag);
+    }
 }
