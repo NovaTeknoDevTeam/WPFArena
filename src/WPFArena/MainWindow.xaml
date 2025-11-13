@@ -29,6 +29,7 @@
                     <MenuItem Header="Bitmap Image Demo" Click="BitmapImageDemo_Click"/>
                     <MenuItem Header="Toolbar and Tooltip Demo" Click="TooltipDemo_Click"/>
                     <MenuItem Header="ItemsList Demo" Click="ItemsListDemo_Click"/>
+                    <MenuItem Header="Standard Menu Demo" Click="StandardMenuDemo_Click"/>
                 </MenuItem>
                 <MenuItem Header="Complex Examples">
                     <MenuItem Header="Calendar Window" Click="CalendaraWindow_Click"/>

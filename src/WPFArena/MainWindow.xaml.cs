@@ -122,5 +122,11 @@ namespace WPFArena
             ItemsList itemsListDemo = new ItemsList();
             itemsListDemo.Show();
         }
+        
+        private void StandardMenuDemo_Click(object sender, RoutedEventArgs e)
+        {
+            StandardMenu standardMenu = new StandardMenu();
+            standardMenu.Show();
+        }
     }
 }
