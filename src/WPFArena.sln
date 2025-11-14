@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFArena", "WPFArena\WPFArena.csproj", "{7FEB2AB6-6F6A-4042-B1D1-2849ACEF503E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationAndWindows", "ApplicationAndWindows", "{9DD7A5B5-FD20-4891-B20A-B43F445FC86B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewWindows", "NewWindows\NewWindows.csproj", "{DD970496-EC9E-4AD2-8DA4-520F5DC38EF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,12 @@ Global
 		{7FEB2AB6-6F6A-4042-B1D1-2849ACEF503E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FEB2AB6-6F6A-4042-B1D1-2849ACEF503E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FEB2AB6-6F6A-4042-B1D1-2849ACEF503E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD970496-EC9E-4AD2-8DA4-520F5DC38EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD970496-EC9E-4AD2-8DA4-520F5DC38EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD970496-EC9E-4AD2-8DA4-520F5DC38EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD970496-EC9E-4AD2-8DA4-520F5DC38EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD970496-EC9E-4AD2-8DA4-520F5DC38EF5} = {9DD7A5B5-FD20-4891-B20A-B43F445FC86B}
 	EndGlobalSection
 EndGlobal
