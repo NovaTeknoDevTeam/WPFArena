@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace SingleObjectBinding;
 
-public class Person : INotifyPropertyChanged
+public class Person : ObservableObject
 {
     public string Name { get; set; }
     private int _age;
@@ -13,10 +13,11 @@ public class Person : INotifyPropertyChanged
         get { return _age; }
         set
         {
-            _age = value;
-            var pc = PropertyChanged;
-            if (pc != null)
-                pc(this, new PropertyChangedEventArgs("Age"));
+            if (_age != value)
+            {
+                _age = value;
+                OnPropertyChanged("Age");
+            }
         }
     }
 
