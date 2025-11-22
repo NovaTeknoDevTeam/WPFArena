@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="_list">
-            
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListBox x:Name="_list" Grid.Row="0">
         </ListBox>
+        <ComboBox ItemsSource="{Binding}" Grid.Row="1" x:Name="_combobox" />
+        <Button Content="Add" Click="OnAdd" Grid.Row="2" />
     </Grid>
 </Window>
