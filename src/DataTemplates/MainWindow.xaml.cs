@@ -25,14 +25,25 @@ namespace DataTemplates
         {
             InitializeComponent();
 
-            _list.ItemsSource = new ObservableCollection<Person>
-            {
-                new Person{Name="Bart", Age=10},
-                new Person{Name="Bart", Age=45},
-                new Person{Name="Bart", Age=35}
-            };
+            // _list.ItemsSource = new ObservableCollection<Person>
+            // {
+            //     new Person{Name="Bart", Age=10},
+            //     new Person{Name="Bart", Age=45},
+            //     new Person{Name="Bart", Age=35}
+            // };
             
-            DataContext = new Person { Age = 10, Name = "Bart" };
+            //DataContext = new Person { Age = 10, Name = "Bart" };
+            var displayItems = new ObservableCollection<Person>
+            {
+                new() {Name="Bart", Age=10},
+                new Employee{Name="Homer", Age=45, Department = "Nuclear"},
+                new() {Name="Marge", Age=35},
+                new Employee(){Name="Lisa", Age=12, Department = "Accounting"},
+                new() {Name="Maggie", Age=1}
+            };
+
+            DataContext = displayItems;
+            //_list.ItemsSource = displayItems;
         }
     }
 }
