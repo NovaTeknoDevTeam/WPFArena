@@ -44,6 +44,9 @@
         </Button>
         <!-- <ListBox Grid.Row="1" x:Name="_list" HorizontalContentAlignment="Stretch" ItemsSource="{Binding}" /> -->
         <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding}" Grid.Row="1"/>
+        <Button Content="Show Processes" Click="DisplayProcesses">
+            
+        </Button>
     </Grid>
     
 </Window>

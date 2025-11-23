@@ -45,5 +45,11 @@ namespace DataTemplates
             DataContext = displayItems;
             //_list.ItemsSource = displayItems;
         }
+        
+        void DisplayProcesses(object sender, RoutedEventArgs e)
+        {
+            var other = new ProcessList();
+            other.Show();
+        }
     }
 }
