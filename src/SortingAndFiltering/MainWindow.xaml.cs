@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,16 @@ namespace SortingAndFiltering
         {
             InitializeComponent();
             DataContext = Process.GetProcesses();
+        }
+
+        private void SortButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            var view = CollectionViewSource.GetDefaultView(DataContext);
+            view.SortDescriptions.Clear();
+            if (_sortField.SelectedValue != null)
+            {
+                view.SortDescriptions.Add(new SortDescription((string)_sortField.SelectedValue, _ascending.IsChecked==true?ListSortDirection.Ascending:ListSortDirection.Descending));
+            }
         }
     }
 }

@@ -6,23 +6,38 @@
         xmlns:local="clr-namespace:SortingAndFiltering"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:SortFieldList x:Key="sortFields">
+            <local:SortField DisplayName="(Unsorted)" />
+            <local:SortField DisplayName="Process Name" PropertyName="ProcessName" />
+            <local:SortField DisplayName="Process ID" PropertyName="Id" />
+            <local:SortField DisplayName="# Threads" PropertyName="Threads.Count" />
+        </local:SortFieldList>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border Margin="2" Padding="4" BorderBrush="Black" BorderThickness="1">
-                        <StackPanel Orientation="Horizontal" TextBlock.FontSize="16">
-                            <TextBlock Foreground="Black" FontWeight="Bold" Text="{Binding ProcessName}" />
-                            <TextBlock Margin="10,0,0,0" Foreground="Blue" Text="{Binding Id, StringFormat='(\{0\})'}" />
-                        </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="4" TextBlock.FontSize="14"></StackPanel>
+        <StackPanel Grid.Row="0">
+            <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding}" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="2" Padding="4" BorderBrush="Black" BorderThickness="1">
+                            <StackPanel Orientation="Horizontal" TextBlock.FontSize="16">
+                                <TextBlock Foreground="Black" FontWeight="Bold" Text="{Binding ProcessName}" />
+                                <TextBlock Margin="10,0,0,0" Foreground="Blue" Text="{Binding Id, StringFormat='(\{0\})'}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="4" TextBlock.FontSize="14">
+            <TextBlock Text="Sort by" VerticalAlignment="Center"></TextBlock>
+            <ComboBox Width="150" Margin="6,0,0,0" x:Name="_sortField" SelectedIndex="0" ItemsSource="{StaticResource sortFields}" DisplayMemberPath="DisplayName" SelectedValuePath="PropertyName"></ComboBox>
+            <CheckBox Margin="10,0,0,0" Content="Ascending" VerticalAlignment="Center" IsChecked="True" x:Name="_ascending" />
+            <Button Margin="4,0,0,0" Content="Sort" Click="SortButton_OnClick" />
+        </StackPanel>
     </Grid>
 </Window>
