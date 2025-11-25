@@ -36,6 +36,7 @@
             </Binding>
         </TextBox>
         <TextBlock Text="Age:" Grid.Row="1" Margin="6" />
-        <TextBox Text="{Binding Age, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1" Margin="6" />
+        <!-- <TextBox Text="{Binding Age, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1" Margin="6" /> -->
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="6" Validation.ErrorTemplate="{StaticResource errorTemplate}" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}" />
     </Grid>
 </Window>

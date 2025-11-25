@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 
 namespace DataValidation;
@@ -13,7 +14,7 @@ public class Person : INotifyPropertyChanged, IDataErrorInfo
     {
         get { return null; }
     }
-
+    
     public string this[string name]
     {
         get
@@ -34,6 +35,7 @@ public class Person : INotifyPropertyChanged, IDataErrorInfo
         }
     }
     
+    [Required(ErrorMessage="A name is required"), StringLength(100, MinimumLength=3, ErrorMessage="Name must have at least 3 characters")]
     public string Name
     {
         get { return _name; }
@@ -49,17 +51,23 @@ public class Person : INotifyPropertyChanged, IDataErrorInfo
 
     private int _age;
 
+    [Range(1,120, ErrorMessage="Age must be a positive integer")]
     public int Age
     {
         get { return _age; }
         set
         {
-            if (value < 1)
-                throw new ArgumentException("Age has to be a positive integer.");
-            
+            // if (value < 1)
+            //     throw new ArgumentException("Age has to be a positive integer.");
+            ValidateProperty(value, "Age");
             _age = value;
             OnPropertyChanged("Age");
         }
+    }
+
+    protected void ValidateProperty<T>(T value, string name)
+    {
+        Validator.ValidateProperty(value, new ValidationContext(this, null, null){MemberName=name});
     }
     
     public event PropertyChangedEventHandler? PropertyChanged;
